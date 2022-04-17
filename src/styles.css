@@ -61,6 +61,7 @@ iframe {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 }
 .flex-column {
   display: flex;
@@ -179,4 +180,12 @@ iframe {
 .about {
   margin: 0 auto;
   text-align: center;
+}
+input.search {
+  margin: 10px;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  text-align: center;
+  border: 4px solid var(--secondary-color);
 }

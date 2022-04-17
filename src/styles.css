@@ -70,7 +70,7 @@ iframe {
 
 /* Display Alignments */
 .start {
-  justify-content: flex-start;
+  justify-content: flex-start !important;
 }
 .center {
   justify-content: center;
@@ -105,14 +105,16 @@ iframe {
 
 /* Buttons */
 .btn {
-  height: 60px;
-  padding: 20px;
-  border: 1px solid var(--primary-color);
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
 }
 
 .btn-primary {
   background-color: var(--primary-color);
-  color: var(--secondary-color);
+  opacity: 0.8;
+  color: #eeeff0;
 }
 .btn-secondary {
   background-color: var(--secondary-color);
@@ -161,4 +163,18 @@ iframe {
   margin: 0 20px;
   max-height: 100%;
   height: 100%;
+}
+.profile {
+  width: 100px;
+  height: 100px;
+}
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.about {
+  margin: 0 auto;
+  text-align: center;
 }

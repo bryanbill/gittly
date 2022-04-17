@@ -1,10 +1,10 @@
 <section class="wrapper" id="wrapper">
     <div class="flex w-full h-full start">
         <div class="h-full w-quarter between">
-           <app-profile></app-profile>
+            <app-profile [user]="user"></app-profile>
         </div>
         <div class="w-three-quarters h-full start">
-           <app-search></app-search>
+            <app-search (setUsernameEvent)="setUsername($event)" [repos]="repos"></app-search>
         </div>
     </div>
 </section>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { GithubService } from '../github.service';
 import { User } from '../user';
 
@@ -10,11 +10,12 @@ import { User } from '../user';
 export class ProfileComponent implements OnInit {
   constructor(private githubService: GithubService) {}
 
+  @Input()
   user!: User;
 
+ 
   ngOnInit(): void {
-    const response = this.githubService.getUser('bryanbill');
-    response.subscribe((data) => (this.user = data));
+   
   }
 
   openLink(user: User) {

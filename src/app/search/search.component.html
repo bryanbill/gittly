@@ -1,8 +1,11 @@
 <div class="flex-column between p-sm">
     <div class="w-three-quarters">
         <div class="flex">
-            <input class="search">
-            <button class="btn btn-secondary"><i class="fa fa-search"></i></button>
+            <input class="search" name="search" [(ngModel)]="search" appValidation>
+            <div *ngIf="search.length > 1">
+                <button class="btn btn-secondary" (click)="setUsername()"><i class="fa fa-search"></i></button>
+            </div>
+
         </div>
     </div>
     <div class="container">
@@ -16,10 +19,10 @@
                     </div>
                     <div class="flex w-100 between">
                         <div class="primary">
-                           {{repo.forks}} Forks
+                            {{repo.forks}} Forks
                         </div>
                         <div class="secondary">
-                           {{repo.watchers}} Stars
+                            {{repo.watchers}} Stars
                         </div>
                         <button class="btn btn-primary">
                             Select

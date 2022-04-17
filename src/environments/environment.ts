@@ -7,7 +7,8 @@ export const environment = {
   // Github API
   githubApiUrl: 'https://api.github.com/',
   githubApiToken: '',
-  
+  clientId: '',
+  clientSecret: '',
 };
 
 /*

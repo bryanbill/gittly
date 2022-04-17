@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { catchError, Observable, throwError } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { User } from './user';
+import { Repositories } from './repos';
 @Injectable({
   providedIn: 'root',
 })
@@ -12,14 +14,24 @@ export class GithubService {
    * @param username
    */
   getUser(username: string) {
-    return this.http
-      .get(`${environment.githubApiUrl}/users/${username}`)
-      .subscribe((data) => data);
+    return this.http.get<User>(`${environment.githubApiUrl}/users/${username}`);
   }
 
   getUserRepos(username: string) {
-    return this.http
-      .get(`${environment.githubApiUrl}/users/${username}/repos`)
-      .subscribe((data) => data);
+    return this.http.get<Repositories[]>(
+      `${environment.githubApiUrl}/users/${username}/repos`
+    );
+  }
+  handleError(error: HttpErrorResponse) {
+    let errorMessage = 'Unknown error!';
+    if (error.error instanceof ErrorEvent) {
+      // Client-side errors
+      errorMessage = `Error: ${error.error.message}`;
+    } else {
+      // Server-side errors
+      errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
+    }
+    window.alert(errorMessage);
+    return throwError(errorMessage);
   }
 }

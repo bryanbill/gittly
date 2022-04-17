@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   // Github API
-  githubApiUrl: 'https://api.github.com/',
+  githubApiUrl: 'https://api.github.com',
   githubApiToken: '',
   clientId: '',
   clientSecret: '',

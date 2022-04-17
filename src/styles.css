@@ -1,1 +1,94 @@
-/* You can add global styles to this file, and also import other style files */
+/* Import FontAwesome From CDN */
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+/* Import Font Nunito */
+@import url(https://fonts.googleapis.com/css?family=Nunito:400,700);
+
+/* Import MediaQueries */
+@import url(./media-queries.css);
+
+/* Variables */
+:root {
+  --primary-color: #dc3026;
+  --secondary-color: #eeeff0;
+}
+
+/* Reset  */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+/* Displays */
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Display Alignments */
+.start {
+  justify-content: flex-start;
+}
+.center {
+  justify-content: center;
+}
+.end {
+  justify-content: flex-end;
+}
+.around {
+  justify-content: space-around;
+}
+.between {
+  justify-content: space-between;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+.align-center {
+  align-items: center;
+}
+.align-end {
+  align-items: flex-end;
+}
+
+/* Colors */
+.primary {
+  color: var(--primary-color);
+}
+.secondary {
+  color: var(--primary-blue);
+}
+
+/* Buttons */
+.btn {
+  height: 60px;
+  padding: 20px;
+  border: 1px solid var(--primary-color);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+

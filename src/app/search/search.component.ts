@@ -29,4 +29,7 @@ export class SearchComponent implements OnInit {
   setUsername() {
     this.setUsernameEvent.emit(this.search);
   }
+  openLink(repo: Repositories) {
+    window.open(repo.html_url, '_blank');
+  }
 }

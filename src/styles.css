@@ -159,7 +159,7 @@ iframe {
 .card {
   background-color: var(--secondary-color);
   border-radius: 5px;
-  padding: 20px;
+  padding: 10px;
 }
 
 /* Misc */

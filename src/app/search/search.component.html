@@ -12,7 +12,7 @@
         <h4>Repositories - {{repos.length}}</h4>
         <div class="flex wrap between sm-flex-col">
             <div class="card w-quarter h-2 sm-full md-full" *ngFor="let repo of repos">
-                <div class="flex-column">
+                <div class="flex-column between h-full">
                     <div class="flex-column w-full">
                         <h5>{{repo.name.toUpperCase()}}</h5>
                         <p class="about">{{repo.description}}</p>
@@ -21,10 +21,10 @@
                         <div class="primary">
                             {{repo.forks}} Forks
                         </div>
-                        <div class="secondary">
+                        <div class="secondary"> 
                             {{repo.watchers}} Stars
                         </div>
-                        <button class="btn btn-primary">
+                        <button class="btn btn-primary" (click)="openLink(repo)">
                             Select
                         </button>
                     </div>

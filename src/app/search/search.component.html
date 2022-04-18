@@ -10,14 +10,14 @@
     </div>
     <div class="container">
         <h4>Repositories - {{repos.length}}</h4>
-        <div class="flex wrap between">
-            <div class="card w-quarter" *ngFor="let repo of repos">
+        <div class="flex wrap between sm-flex-col">
+            <div class="card w-quarter h-2 sm-full md-full" *ngFor="let repo of repos">
                 <div class="flex-column">
-                    <div class="flex-column w-tfull">
+                    <div class="flex-column w-full">
                         <h5>{{repo.name.toUpperCase()}}</h5>
                         <p class="about">{{repo.description}}</p>
                     </div>
-                    <div class="flex w-100 between">
+                    <div class="flex w-100 between sm-wrap">
                         <div class="primary">
                             {{repo.forks}} Forks
                         </div>

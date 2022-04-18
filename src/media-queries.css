@@ -1,4 +1,29 @@
-/* MediaQueries for screens greater than 768px */
-@media screen  {
-    
+@media only screen and (max-width: 600px) {
+  .sm-wrap {
+    flex-wrap: wrap;
+  }
+  .sm-half {
+    width: 50% !important;
+  }
+  .sm-full {
+    width: 100% !important;
+  }
+  .sm-flex-col {
+    flex-direction: column !important;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1200px) {
+  .md-wrap {
+    flex-wrap: wrap;
+  }
+  .md-half {
+    width: 50% !important;
+  }
+  .md-full {
+    width: 100% !important;
+  }
+  .md-flex-col {
+    flex-direction: column !important;
+  }
 }

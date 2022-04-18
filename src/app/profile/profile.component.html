@@ -1,17 +1,17 @@
-<div class="flex-column center h-full p-sm">
+<div class="flex-column start h-full p-sm">
 
-    <div class="flex-column card w-full">
+    <div class="flex-column card w-full gradient">
         <div class="profile">
             <img src="{{user.avatar_url}}" alt="" srcset="" class="avatar">
         </div>
         <div class="p-md text-center">
-            {{user.name}} 
-            <span>@{{user.login}}</span>
+            <p>{{user.name}} </p>
+            <p>@{{user.login}}</p>
         </div>
 
     </div>
 
-    <div class="flex w-full md:flex-column">
+    <div class="flex w-full sm-wrap md-wrap">
         <div class="card">
             {{user.public_repos}} Repos
         </div>

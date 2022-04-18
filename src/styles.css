@@ -160,7 +160,6 @@ iframe {
   background-color: var(--secondary-color);
   border-radius: 5px;
   padding: 20px;
-  margin: 20px;
 }
 
 /* Misc */
@@ -196,4 +195,13 @@ iframe {
   border-radius: 5px;
   text-align: center;
   border: 4px solid var(--secondary-color);
+}
+
+/* Typography */
+.text-center {
+  text-align: center;
+}
+
+.h-2{
+  height: 250px;
 }

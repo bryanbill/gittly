@@ -50,7 +50,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - TypeScript
 - HTML
 - CSS
-- Bootstrap
 
 ## Known Bugs
 
